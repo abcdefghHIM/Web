@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top-main{
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #3d454c;
+	position: fixed;
+	top: 0;
+    width: 100%;
+    box-shadow:0 0 12px #000000;
+}
+
+.top-main li{
+	float: left;
+}
+
+.top-main li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.top-main li a:hover{
+	background-color: #323a40;
+}
+
+.top-main li img{
+	background-color: #3d454c;
+}
