@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="zh-cn">
 
@@ -6,13 +6,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge chrome=1">
     <title></title>
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="registration.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 </head>
 
 <body>
-    <form action="https://www.baidu.com" class="login-form">
-        <h1>Login</h1>
+    <form action="login.html" class="registration-form">
+        <h1>Sign up</h1>
         <div class="txtb">
             <input type="text" />
             <span data-placeholder="Username"></span>
@@ -21,10 +21,15 @@
             <input type="password" />
             <span data-placeholder="Password"></span>
         </div>
-        <input type="submit" class="logbtn" value="Login" />
-        <div class="bottom-text">
-            Don't have account? <a href="registration.html">Sign up</a>
+        <div class="txtb">
+            <input type="password" />
+            <span data-placeholder="Confirm Password"></span>
         </div>
+        <div class="txtb">
+            <input type="email" />
+            <span data-placeholder="Email"></span>
+        </div>
+        <input type="submit" class="sigbtn" value="Sign up" />
     </form>
     <script type="text/javascript">
         $(".txtb input").on("focus", function () {
