@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .top-main{
@@ -9,8 +9,8 @@
 	background-color: #3d454c;
 	position: fixed;
 	top: 0;
-    width: 100%;
-    box-shadow:0 0 12px #000000;
+	width: 100%;
+	box-shadow:0 0 12px #000000;
 }
 
 .top-main li{
@@ -31,4 +31,5 @@
 
 .top-main li img{
 	background-color: #3d454c;
+	margin: auto;
 }
