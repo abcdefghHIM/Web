@@ -9,10 +9,11 @@
 	<link rel="stylesheet" href="page/css/index.css" />
 	<link rel="shortcut icon" type="image/x-icon" href="page/icon/icon.ico" />
 
-	<script type="text/javascript" charset="utf-8"
-		src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.0.min.js"></script>
-	<script type="text/javascript" charset="utf-8"
-		src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.0.min.js">
+	</script>
+	<script type="text/javascript" charset="utf-8" src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.min.js">
+	</script>
+	<script src="page/js/vector.js"></script>
 	<script type="text/javascript">
 		L2Dwidget.init({
 			"display": {
@@ -24,19 +25,44 @@
 				"vOffset": 0
 			}
 		});
+
+		function getRndInteger(min, max) {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		function start() {
+			Victor("container", "output");
+			var p = document.getElementById("abc");
+			var text = ["据说在登录时有概率会跳转到别的地方", "究级背景","这只是一个提示","多刷新几次"];
+			p.innerText = text[getRndInteger(0, text.length - 1)];
+		}
+
+		function click() {
+			if (getRndInteger(0, 1) == 0) {
+				window.location.href="page/login.html";
+			} else {
+				window.location.href="page/きょうの地獄通信.html";
+			}
+		}
 	</script>
 </head>
 
-<body>
-	<div>
-		<ul class="top-main">
-			<ul class="top-child">
-				<li><img src="page/icon/icon.ico" /></li>
-				<li><a href="index.html">首页</a></li>
-				<li><a href="page/login.html">登录</a></li>
-				<li><a href="page/registration.html">注册</a></li>
-			</ul>
-		</ul>
+<body onload="start()">
+	<div id="container">
+		<div id="output">
+			<div>
+				<ul class="top-main">
+					<ul class="top-child">
+						<li><img src="page/icon/icon.ico" /></li>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="javascript:click();">登录</a></li>
+						<li><a href="page/registration.html">注册</a></li>
+					</ul>
+				</ul>
+			</div>
+			<p id="abc" style="top: 50px;position: absolute;"></p>
+		</div>
+	</div>
 	</div>
 </body>
 
