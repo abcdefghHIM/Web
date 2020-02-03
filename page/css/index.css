@@ -4,7 +4,6 @@
 }
 
 .top-main{
-	list-style-type: none;
 	overflow: hidden;
 	background-color: #3d454c;
 	position: fixed;
@@ -13,11 +12,16 @@
 	box-shadow:0 0 12px #000000;
 }
 
-.top-main li{
+.top-child{
+	list-style-type: none;
+	width: 100%;
+}
+
+.top-child li{
 	float: left;
 }
 
-.top-main li a{
+.top-child li a{
 	display: block;
 	color: white;
 	text-align: center;
@@ -25,11 +29,10 @@
 	text-decoration: none;
 }
 
-.top-main li a:hover{
+.top-child li a:hover{
 	background-color: #323a40;
 }
 
-.top-main li img{
+.top-child li img{
 	background-color: #3d454c;
-	margin: auto;
 }

@@ -9,33 +9,39 @@
     <link rel="stylesheet" href="css/registration.css" />
     <link rel="shortcut icon" type="image/x-icon" href="icon/icon.ico" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script src="js/vector.js"></script>
 </head>
 
 <body>
-    <form action="login.html" class="registration-form">
-        <h1>注册</h1>
-        <div class="txtb">
-            <input type="text" />
-            <span data-placeholder="用户名"></span>
+    <div id="container">
+        <div id="output">
+            <form action="login.html" class="registration-form">
+                <h1>注册</h1>
+                <div class="txtb">
+                    <input type="text" />
+                    <span data-placeholder="用户名"></span>
+                </div>
+                <div class="txtb">
+                    <input type="password" />
+                    <span data-placeholder="密码"></span>
+                </div>
+                <div class="txtb">
+                    <input type="password" />
+                    <span data-placeholder="确认密码"></span>
+                </div>
+                <div class="txtb">
+                    <input type="email" />
+                    <span data-placeholder="电子邮箱"></span>
+                </div>
+                <input type="submit" class="sigbtn" value="注册" />
+                <div class="bottom-text">
+                    已有账号? <a href="login.html">登录</a>
+                </div>
+            </form>
         </div>
-        <div class="txtb">
-            <input type="password" />
-            <span data-placeholder="密码"></span>
-        </div>
-        <div class="txtb">
-            <input type="password" />
-            <span data-placeholder="确认密码"></span>
-        </div>
-        <div class="txtb">
-            <input type="email" />
-            <span data-placeholder="电子邮箱"></span>
-        </div>
-        <input type="submit" class="sigbtn" value="注册" />
-        <div class="bottom-text">
-            已有账号? <a href="login.html">登录</a>
-        </div>
-    </form>
+    </div>
     <script type="text/javascript">
+        Victor("container", "output");
         $(".txtb input").on("focus", function () {
             $(this).addClass("focus");
         });
