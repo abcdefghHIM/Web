@@ -1,5 +1,5 @@
 var MoeSpider = navigator.userAgent.toLowerCase();
-var Spiders = new Array('Baiduspider','Googlebot','360Spider','HaoSouSpider','Bingbot','BingPreview','AdIdxBot','MSNBot','Sogou Spider','Sogou web spider','Sogou inst spider');
+var Spiders = new Array('Baiduspider', 'Googlebot', '360Spider', 'HaoSouSpider', 'Bingbot', 'BingPreview', 'AdIdxBot', 'MSNBot', 'Sogou Spider', 'Sogou web spider', 'Sogou inst spider');
 
 var now = new Date();
 var hr = now.getHours();
@@ -8,7 +8,7 @@ var mi = now.getMinutes();
 function getChromeVersion() {
     var arr = navigator.userAgent.split(' ');
     var version = '';
-    for (var i=0; i<arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         if (/Chrome/i.test(arr[i])) {
             version = arr[i];
             break;
@@ -22,7 +22,7 @@ function getChromeVersion() {
     }
 }
 
-if (hr<8 || hr>=18) {
+if (hr < 8 || hr >= 18) {
     if (navigator.userAgent.indexOf('MSIE 6.0') > -1) {
         document.getElementById('start').style.display = 'block';
     }
@@ -40,10 +40,10 @@ if (hr<8 || hr>=18) {
         }
         document.getElementById('fire').style.display = 'block';
         document.getElementById('animate').play();
-    }  
+    }
 }
 else {
-    for (var i=0; i<Spiders.length; i++) {
+    for (var i = 0; i < Spiders.length; i++) {
         if (MoeSpider.indexOf(Spiders[i].toLowerCase()) > -1) {
             document.getElementById('fire').style.display = 'block';
             document.getElementById('animate').play();
