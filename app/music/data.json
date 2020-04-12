@@ -1,0 +1,14 @@
+{
+    "Music": {
+        "url": "https://abcdefghHIM.github.io/Web/app/music/Music.exe",
+        "version": 1
+    },
+    "MusicControlLibrary": {
+        "url": "https://abcdefghHIM.github.io/Web/app/music/MusicControlLibrary.dll",
+        "version": 1
+    },
+    "MusicTool": {
+        "url": "https://abcdefghHIM.github.io/Web/app/music/MusicTool.dll",
+        "version": 1
+    }
+}
