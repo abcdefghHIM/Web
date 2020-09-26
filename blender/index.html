@@ -27,38 +27,111 @@
             vertical-align: middle;
             border-color: inherit;
         }
+
+        .txtt {
+            text-align: center
+        }
     </style>
+    <script id="scr">
+        function Init() {
+            document.onkeydown = function (e) {
+                var currKey = 0,
+                    evt = e || window.event;
+                currKey = evt.keyCode || evt.which || evt.charCode;
+                if (currKey == 123) {
+                    window.event.cancelBubble = true;
+                    window.event.returnValue = false;
+                    alert("没啥好康的[doge]");
+                }
+            }
+            document.oncontextmenu = function () {
+                return false;
+            }
+            var item = [{
+                name: "滴水.blend",
+                text: "-",
+                size: "37.1 MB (39,001,476 字节)",
+                time: "2020‎年‎9‎月‎25‎日，‏‎19:16:26"
+            }, {
+                name: "放海.blend",
+                text: "-",
+                size: "838 KB (858,860 字节)",
+                time: "2020‎年‎9‎月‎20‎日，‏‎14:24:58"
+            }, {
+                name: "虎爷.blend",
+                text: "-",
+                size: "17.6 MB (18,520,672 字节)",
+                time: "‎2020‎年‎9‎月‎26‎日，‏‎13:51:12"
+            }, {
+                name: "glass.png",
+                text: "滴水.blend的素材",
+                size: "876 KB (897,116 字节)",
+                time: "2020‎年‎9‎月‎25‎日，‏‎19:02:21"
+            }];
+            for (let index = 0; index < item.length; index++) {
+                var dic = item[index];
+                var name = dic["name"];
+                var text = dic["text"];
+                var size = dic["size"];
+                var time = dic["time"];
+                var Tr = document.createElement("tr");
+                var Name = document.createElement("td");
+                Name.innerHTML = name;
+                Name.className = "txtt";
+                Tr.appendChild(Name);
+                var Size = document.createElement("td");
+                Size.innerHTML = size;
+                Size.className = "txtt";
+                Tr.appendChild(Size);
+                var Time = document.createElement("td");
+                Time.innerHTML = time;
+                Time.className = "txtt";
+                Tr.appendChild(Time);
+                var Type = document.createElement("td");
+                Type.innerHTML = name.split(".")[1] + " 文件";
+                Type.className = "txtt";
+                Tr.appendChild(Type);
+                var Text = document.createElement("td");
+                Text.innerHTML = text;
+                Text.className = "txtt";
+                Tr.appendChild(Text);
+                var Do = document.createElement("td");
+                var D = document.createElement("a");
+                D.href = name;
+                D.download = name;
+                D.innerHTML = "下载";
+                Do.className = "txtt";
+                Do.appendChild(D);
+                Tr.appendChild(Do);
+                document.getElementById("bod").appendChild(Tr);
+            }
+            console.log("相关代码被我删了,要看的话自己去看开源仓库[doge]");
+            document.getElementById("bo").removeAttribute("onload");
+            document.getElementById("bo").removeAttribute("id");
+            document.getElementById("scr").remove();
+        }
+    </script>
 </head>
 
-<body>
+<body onload="Init()" id="bo">
     <h1>资料下载</h1>
     <div class="download-list-frame" width="100%" cellspacing="0" cellpadding="0">
         <table width="100%" class="download-table">
             <thead>
                 <tr>
-                    <th width="30%">文件名</th>
-                    <th width="30%">文件大小</th>
-                    <th width="30%">上传时间</th>
+                    <th width="50%">文件名</th>
+                    <th width="60%">文件大小</th>
+                    <th width="60%">上传时间</th>
+                    <th width="30%">文件类型</th>
+                    <th width="100%">备注</th>
                     <th width="30%">操作</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>滴水.blend</td>
-                    <td>34.9 MB</td>
-                    <td>‎2020‎年‎9‎月‎20‎日，‏‎14:24:58</td>
-                    <td><a href="滴水.blend" download="滴水.blend">下载</a></td>
-                </tr>
-                <tr>
-                    <td>滴水.blend</td>
-                    <td>838 KB</td>
-                    <td>2020‎年‎9‎月‎20‎日，‏‎14:24:58</td>
-                    <td><a href="放海.blend" download="放海.blend">下载</a></td>
-                </tr>
+            <tbody id="bod">
             </tbody>
         </table>
     </div>
-    <p>有时间更新一下布局</p>
+    <p>有时间更新一下布局[doge]</p>
 </body>
 
 </html>
